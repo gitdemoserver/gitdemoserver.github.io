@@ -8,7 +8,6 @@
       <title>Ridhisidhi Artwares</title>
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-      <link rel="stylesheet" type="text/css" href="css/normalize.css">
       <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
       <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -16,29 +15,26 @@
    <body>
       <header>
          <div class="header-information">
-            <div class="col-xs-12 col-sm-8 col-md-8">
-               <div class="top-information-left">
+            <div class="top-information-left">
                   <div class="office-address">
-                     <i></i>
-                     <span></span>
+                     <i class="fa fa-map-marker" aria-hidden="true"></i>
+                     <span>Rawat Building, Bagar Chowk, Jodhpur</span>
                   </div>
                   <div class="office-contact">
-                     <i></i>
-                     <span></span>
+                     <i class="fa fa-mobile" aria-hidden="true"></i>
+                     <span>+91-1234567890</span>
                   </div>
                   <div class="office-email">
-                     <i></i>
-                     <span></span>
+                     <i class="fa fa-envelope" aria-hidden="true"></i>
+                     <span>support@ridhisidhiartwares.co.in</span>
                   </div>
-               </div>
             </div>
-            <div class="col-xs-12 col-sm-4 col-md-4">
-               <div class="top-information-right">
-                  <div class="social-links">
-                     <a href=""><i></i></a>
-                     <a href=""><i></i></a>
-                  </div>
-               </div>
+            <div class="top-information-right">
+               	      <div class="follow-us-top">Follow us:</div>
+	                  <div class="social-links">
+	                     <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i>facebook</a>
+	                     <a href=""><i class="fa fa-whatsapp" aria-hidden="true"></i>whatsapp</a>
+	                  </div>
             </div>
          </div>
          <nav class="navbar navbar-default navbar-fixed-top custom-navbar">
@@ -58,12 +54,10 @@
                <!-- Collect the nav links, forms, and other content for toggling -->
                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
-                     <li><a href="#">Home</a></li>
-                     <li><a href="#">About</a></li>
                      <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                           <a href="dstratchpaint_furniture.php">
+                           <a href="products.html">
                               <li>Distratch Painted Items</li>
                            </a>
                            <a href="assortediron_furniture.php">
@@ -107,16 +101,16 @@
       </header>
       <section class="web-banner">
          <div class="owl-carousel owl-theme" id="banner-carousel">
-            <div class="item">
+            <div class="item blank-banner-layout">
                <img src="images/01.jpg" class="img-responsive">
             </div>
-            <div class="item">
+            <div class="item blank-banner-layout">
                <img src="images/02.jpg" class="img-responsive">
             </div>
-            <div class="item">
+            <div class="item blank-banner-layout">
                <img src="images/03.jpg" class="img-responsive">
             </div>
-            <div class="item">
+            <div class="item blank-banner-layout">
                <img src="images/04.jpg" class="img-responsive">
             </div>
          </div>
@@ -635,6 +629,23 @@
              this.className += " active";
            });
          }
+
+        /*header fixed function*/
+        $(window).scroll(function() {
+         	var scroll = $(window).scrollTop();
+			     var bellposition = document.getElementById("bellButton");
+			     var notificationbox = document.getElementById("bellNotification");
+			     if (scroll >= 50) {
+			     $(".navbar-fixed-top").addClass("missing-top");
+			     
+			     } else if (scroll < 50) {
+			     $(".navbar-fixed-top").removeClass("missing-top");
+			     
+			}
+
+         });
+         setInterval('scroll()', 600);
+         /* end header fixed function*/
       </script>
    </body>
 </html>

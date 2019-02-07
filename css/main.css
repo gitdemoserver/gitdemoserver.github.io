@@ -663,3 +663,174 @@ section{
 .contactus-section{
 	padding: 0px;
 }
+.blank-banner-layout{
+	width: 100%;
+	background-color: #fdb05e;
+}
+.header-information{
+	float: left;
+	width: 100%;
+	background: #000000;
+	padding: 4px 0px;
+}
+.navbar-fixed-top{
+	top: 35px;
+}
+.office-address{
+	float: left;
+	width: auto;
+}
+.office-address	i{
+	font-size: 0.8em;
+	color: #ffffff;
+}
+.office-address	span{
+	font-size: 0.8em;
+	color: #ffffff;
+}
+.office-address	span:after{
+	content: "";
+	border-right: 1px solid #ffffff;
+	height: 20px;
+	padding-left: 10px;
+}
+.office-contact{
+	float: left;
+	width: auto;
+	padding-left: 12px;
+}
+.office-contact	i{
+	font-size: 1.1em;
+	position: relative;
+    top: 2px;
+	color: #ffffff;
+}
+.office-contact	span{
+	font-size: 0.8em;
+	color: #ffffff;
+}
+.office-contact	span:after{
+	content: "";
+	border-right: 1px solid #ffffff;
+	height: 20px;
+	padding-left: 10px;
+}
+.office-email{
+	float: left;
+	width: auto;
+	padding:0px 12px;
+}
+.office-email i{
+	font-size: 0.8em;
+	color: #ffffff;
+}
+.office-email span{
+	font-size: 0.8em;
+	color: #ffffff;
+}
+.top-information-right{
+	float: left;
+	width: 22%;
+	padding: 0px 20px;
+}
+.follow-us-top{
+	float: left;
+	width: auto;
+	font-size: 0.8em;
+	color: #ffffff;
+	margin-right: 10px;
+}
+.social-links{
+	float: left;
+}
+.social-links a:first-child{
+	padding: 0px 10px 0px 0px;
+	margin-right: 10px;
+	border-right: 1px solid #ffffff;
+}
+.social-links a{
+	color: #ffffff;
+	font-size: 0.8em;
+}
+.social-links i{
+	font-size: 1em;
+	color: #ffffff;
+	margin-right: 4px;
+}
+.top-information-left{
+	float: left;
+	width: 78%;
+	padding: 0px 20px;
+}
+.navbar-fixed-top.missing-top{
+	top: 0px;
+}
+.navbar-nav>li>.dropdown-menu{
+	width: 320px;
+    background: #e27909;
+    font-size: 0.9em;
+    color: #ffffff;
+    top: 55px;
+    right: -15px;
+}
+.dropdown-menu a,
+.dropdown-menu a:hover,
+.dropdown-menu a:focus{
+	color: #ffffff;
+	text-decoration: none;
+}
+.innerpage-section{
+	margin-top: 65px;
+}
+.left-menu{
+	float: left;
+	width: 28%;
+	padding-right: 20px;
+}
+.left-menu ul{
+	float: left;
+	width: 100%;
+	margin: 0px;
+	padding-left:0px;
+	list-style: none;
+}
+.left-menu ul li{
+	float: left;
+	width: 100%;
+	font-size: 1em;
+	color: #000000;
+	border-bottom: 1px dashed #ccc;
+	padding: 5px 0px;
+}
+.left-menu ul li:before {
+    position: relative;
+    content: "\f054";
+    top: -1px;
+    color: #fd9213;
+    font-family: FontAwesome;
+    font-size: 0.7em;
+    padding: 0px 10px 0px 0px;
+}
+.left-menu ul li a,
+.left-menu ul li a:hover,
+.left-menu ul li a:focus{
+	color: #000000;
+	text-decoration: none;
+}
+.right-product-detail{
+	float: left;
+	width: 69%;
+	border-left: 1px dashed #ccc;
+}
+.product-details-mask{
+	float: left;
+	width: 100%;
+	padding: 30px 0px 0px 0px;
+}
+.product-details-item{
+    float: left;
+    width: 180px;
+    height: 270px;
+    margin: 5px 0px 10px 0px;
+    border-bottom: 1px solid #fd9213;
+}
