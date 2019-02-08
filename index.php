@@ -500,7 +500,7 @@ if(isset($_POST['submit'])){
                <div class="col-xs-12 col-sm-7 col-md-7">
                   <div class="contact-form">
                      <h3>Enquiry</h3>
-                     <form method="post" action="thnak-you.html">
+                     <form method="post" action="">
                         <div class="form-field">
                            <input name="userName" placeholder="Name" type="text" class="textbox">
                         </div>
