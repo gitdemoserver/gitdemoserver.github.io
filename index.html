@@ -1,3 +1,21 @@
+<?php 
+if(isset($_POST['submit'])){
+    $to = "er.deep.panwar@gmail.com"; // this is your Email address
+    $from = $_POST['userEmail']; // this is the sender's Email address
+    $first_name = $_POST['userName'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " wrote the following:" . "\n\n" . $_POST['userMsg'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['userMsg'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -11,30 +29,31 @@
       <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
       <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" type="text/css" href="css/main.css">
+      <link rel="stylesheet" type="text/css" href="css/responsive-layouts.css">
    </head>
    <body>
       <header>
          <div class="header-information">
             <div class="top-information-left">
-                  <div class="office-address">
-                     <i class="fa fa-map-marker" aria-hidden="true"></i>
-                     <span>Rawat Building, Bagar Chowk, Jodhpur</span>
-                  </div>
-                  <div class="office-contact">
-                     <i class="fa fa-mobile" aria-hidden="true"></i>
-                     <span>+91-1234567890</span>
-                  </div>
-                  <div class="office-email">
-                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                     <span>support@ridhisidhiartwares.co.in</span>
-                  </div>
+               <div class="office-address">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <span>Rawat Building, Bagar Chowk, Jodhpur</span>
+               </div>
+               <div class="office-contact">
+                  <i class="fa fa-mobile" aria-hidden="true"></i>
+                  <span>+91-1234567890</span>
+               </div>
+               <div class="office-email">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <span>support@ridhisidhiartwares.co.in</span>
+               </div>
             </div>
             <div class="top-information-right">
-               	      <div class="follow-us-top">Follow us:</div>
-	                  <div class="social-links">
-	                     <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i>facebook</a>
-	                     <a href=""><i class="fa fa-whatsapp" aria-hidden="true"></i>whatsapp</a>
-	                  </div>
+               <div class="follow-us-top">Follow us:</div>
+               <div class="social-links">
+                  <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i>facebook</a>
+                  <a href=""><i class="fa fa-whatsapp" aria-hidden="true"></i>whatsapp</a>
+               </div>
             </div>
          </div>
          <nav class="navbar navbar-default navbar-fixed-top custom-navbar">
@@ -57,37 +76,34 @@
                      <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                           <a href="products.html">
+                           <a href="distratchpainted-item.html">
                               <li>Distratch Painted Items</li>
                            </a>
-                           <a href="assortediron_furniture.php">
+                           <a href="assortediron-furniture.html">
                               <li>Assorted Iron Items</li>
                            </a>
-                           <a href="assorted_furniture.php">
+                           <a href="assorted-furniture.html">
                               <li>Assorted Items</li>
                            </a>
-                           <a href="boxes_furniture.php">
+                           <a href="boxes-furniture.html">
                               <li>Boxes</li>
                            </a>
-                           <a href="assortedwooden_furniture.php">
+                           <a href="assortedwooden-furniture.html">
                               <li>Assorted Wooden Items</li>
                            </a>
-                           <a href="bedsides_furniture.php">
+                           <a href="bedsides-furniture.html">
                               <li>Bed Sides</li>
                            </a>
-                           <a href="chesters_furniture.php">
+                           <a href="chesters-furniture.html">
                               <li>Chesters</li>
                            </a>
-                           <a href="storagealmirah_furniture.php">
+                           <a href="storagealmirah-furniture.html">
                               <li>Storage Almirah</li>
                            </a>
-                           <a href="tibetianpainted_furniture.php">
+                           <a href="tibetianpainted-furniture.html">
                               <li>Tibetian Painted Furniture</li>
                            </a>
-                           <a href="tibetianpaintedindian_furniture.php">
-                              <li>Traditonal Indian Painted Furniture</li>
-                           </a>
-                           <a href="woodensideboards_furniture.php">
+                           <a href="woodensideboards-furniture.html">
                               <li>Wooden Sideboards</li>
                            </a>
                         </ul>
@@ -297,7 +313,6 @@
                         <img src="images/products/RSAWP-2388.jpg" alt="Lights">
                      </div>
                   </div>
-
                   <div class="product-filter-column assortedironitems">
                      <div class="product-filter-content">
                         <img src="images/products/1423876934.jpg" alt="assorted iron items">
@@ -313,7 +328,6 @@
                         <img src="images/products/1423876744.jpg" alt="assorted iron items">
                      </div>
                   </div>
-
                   <div class="product-filter-column assorteditems">
                      <div class="product-filter-content">
                         <img src="images/products/1423877225.jpg" alt="assorted items">
@@ -329,7 +343,6 @@
                         <img src="images/products/1423877171.jpg" alt="assorted items">
                      </div>
                   </div>
-
                   <div class="product-filter-column boxes">
                      <div class="product-filter-content">
                         <img src="images/products/RSAWP-3595.jpg" alt="boxes">
@@ -345,7 +358,6 @@
                         <img src="images/products/RSAWP-3600.jpg" alt="boxes">
                      </div>
                   </div>
-
                   <div class="product-filter-column assortedwoodenitems">
                      <div class="product-filter-content">
                         <img src="images/products/RSAWP-2397.jpg" alt="assorted wooden items">
@@ -361,7 +373,6 @@
                         <img src="images/products/RSAWP-2382.jpg" alt="boxes">
                      </div>
                   </div>
-
                   <div class="product-filter-column bedsides">
                      <div class="product-filter-content">
                         <img src="images/products/RSAWP-2398.jpg" alt="bed sides">
@@ -377,7 +388,6 @@
                         <img src="images/products/RSAWP-3593.jpg" alt="bed sides">
                      </div>
                   </div>
-
                   <div class="product-filter-column chesters">
                      <div class="product-filter-content">
                         <img src="images/products/RSAWP-2356.jpg" alt="chesters">
@@ -393,7 +403,6 @@
                         <img src="images/products/RSAWP-2100.jpg" alt="chesters">
                      </div>
                   </div>
-
                   <div class="product-filter-column storagealmirah">
                      <div class="product-filter-content">
                         <img src="images/products/RSAWP-2364.jpg" alt="storage almirah">
@@ -409,7 +418,6 @@
                         <img src="images/products/RSAWP-2362.jpg" alt="storage almirah">
                      </div>
                   </div>
-
                   <div class="product-filter-column tibetianfurniture">
                      <div class="product-filter-content">
                         <img src="images/products/1423877387.jpg" alt="tibetian furniture">
@@ -425,7 +433,6 @@
                         <img src="images/products/1423878093.jpg" alt="tibetian furniture">
                      </div>
                   </div>
-
                   <div class="product-filter-column assorteditems">
                      <div class="product-filter-content">
                         <img src="images/products/1423877796.jpg" alt="assorted items">
@@ -441,7 +448,6 @@
                         <img src="images/products/1423878057.jpg" alt="assorted items">
                      </div>
                   </div>
-
                   <!-- END GRID -->
                </div>
                <!-- END MAIN -->
@@ -455,19 +461,16 @@
                   <h1 align="center">Our Customers</h1>
                   <div class="owl-carousel owl-theme" id="ourcustomer-carousel">
                      <div class="item">
-                        <div class="client-says-info">Talking about quality, they duly check and approve each product with highest accuracy, you will never find a flaw in any single product.</div>
+                        <div class="client-says-info">They having lots of collect of Handicraft items made by the local artisans, the Wooden Items and iron Items made are many. The collection of Rajathani items are admirable. You can have wider price range to buy it. If you want to have purchasing of the Rajasthani Handicraft items, it's the Most Authentic.</div>
                      </div>
                      <div class="item">
-                        <div class="client-says-info">Talking about quality, they duly check and approve each product with highest accuracy, you will never find a flaw in any single product.</div>
+                        <div class="client-says-info">We visited this website only after reading very good reviews online, we found they have very wide range of wooden handmade handicrafts, and they very creative with there rajasthani and Tibetian pantings on it, you can find better deal on this online portals.</div>
                      </div>
                      <div class="item">
-                        <div class="client-says-info">Talking about quality, they duly check and approve each product with highest accuracy, you will never find a flaw in any single product.</div>
+                        <div class="client-says-info">Just fall in love with the handmade wooden and Iron handicrafts. Very nominal range and higher range also available. Worth shopping, packaging of delivering item is also very good.</div>
                      </div>
                      <div class="item">
-                        <div class="client-says-info">Talking about quality, they duly check and approve each product with highest accuracy, you will never find a flaw in any single product.</div>
-                     </div>
-                     <div class="item">
-                        <div class="client-says-info">Talking about quality, they duly check and approve each product with highest accuracy, you will never find a flaw in any single product.</div>
+                        <div class="client-says-info">Excellent handicraft web portal with very much Rajasthani style - typical of wooden and Irons. Very good collection of Bed Sides, Assorted Wooden Items, Storage Almirah, Chesters etc. It exhibits wide range of handmade wooden handicrafts. Price range is also very pocket friendly.</div>
                      </div>
                   </div>
                </div>
@@ -485,36 +488,33 @@
                   <div class="company_address">
                      <h3>Company Information</h3>
                      <div class="address-text">Rawat Building, Bagar Chowk, 
-                     <br> Jodhpur - 342 001, Rajasthan,
-                     <br> India</div>
-                     <div class="address-contact"><span>Phone:</span>+(91)-(0291) 2543548</div>
-                     <div class="address-contact"><span>Fax:</span> (000) 000 00 00 0</div>
-                     <div class="address-text"><span>Email:</span> <a href="#">ridhisidhiartwares.jdr@gmail.com</a></div>
+                        <br> Jodhpur - 342 001, Rajasthan,
+                        <br> India
+                     </div>
+                     <div class="address-contact"><span>Contact:</span>+91-76654-23002</div>
+                     <div class="address-contact"><span>&nbsp;</span>+91-94141-29348</div>
+                     <div class="address-text"><span>Email:</span> <a href="#">ridhisidhiartwares@gmail.com</a></div>
                      <div class="address-text"><span>Follow on:</span> <a href="#">Facebook</a>, <a href="#">Twitter</a></div>
                   </div>
                </div>
                <div class="col-xs-12 col-sm-7 col-md-7">
                   <div class="contact-form">
                      <h3>Enquiry</h3>
-                     <form method="post" action="">
+                     <form method="post" action="thnak-you.html">
                         <div class="form-field">
-                           <label>NAME</label>
-                           <input name="userName" type="text" class="textbox">
+                           <input name="userName" placeholder="Name" type="text" class="textbox">
                         </div>
                         <div class="form-field">
-                           <label>E-MAIL</label>
-                           <input name="userEmail" type="text" class="textbox">
+                           <input name="userEmail" placeholder="Email" type="text" class="textbox">
                         </div>
                         <div class="form-field">
-                           <label>MOBILE</label>
-                           <input name="userPhone" type="text" class="textbox">
+                           <input name="userPhone" placeholder="Mobile Number" type="text" class="textbox">
                         </div>
                         <div class="form-field">
-                           <label>SUBJECT</label>
-                           <textarea name="userMsg"> </textarea>
+                           <textarea name="userMsg" placeholder="Message">Message</textarea>
                         </div>
                         <div class="form-field-btn">
-                           <span><input type="submit" class="enquiry-btn" value="Submit"></span>
+                           <span><input type="submit" name="submit" value="Submit" class="enquiry-btn"></span>
                         </div>
                      </form>
                   </div>
@@ -525,7 +525,7 @@
       <footer class="footer-copyright-section">
          <div class="copy-right">copyright © All rights reserved by Ridhisidhi Artwares 2018-2019</div>
       </footer>
-      <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>	
+      <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>   
       <script type="text/javascript" src="js/bootstrap.min.js"></script>
       <script type="text/javascript" src="js/owl.carousel.min.js"></script>
       <script>
@@ -566,8 +566,7 @@
                  }
              }
          })
-         
-         $('#ourcustomer-carousel').owlCarousel({
+          $('#ourcustomer-carousel').owlCarousel({
              loop:true,
              margin:10,
              nav:false,
@@ -584,9 +583,7 @@
                  }
              }
          })
-      </script>
-      <script>
-         filterSelection("all")
+          filterSelection("all")
          function filterSelection(c) {
            var x, i;
            x = document.getElementsByClassName("product-filter-column");
@@ -629,23 +626,31 @@
              this.className += " active";
            });
          }
-
-        /*header fixed function*/
-        $(window).scroll(function() {
-         	var scroll = $(window).scrollTop();
-			     var bellposition = document.getElementById("bellButton");
-			     var notificationbox = document.getElementById("bellNotification");
-			     if (scroll >= 50) {
-			     $(".navbar-fixed-top").addClass("missing-top");
-			     
-			     } else if (scroll < 50) {
-			     $(".navbar-fixed-top").removeClass("missing-top");
-			     
-			}
-
+         
+         /*header fixed function*/
+         $(window).scroll(function() {
+          var scroll = $(window).scrollTop();
+           var bellposition = document.getElementById("bellButton");
+           var notificationbox = document.getElementById("bellNotification");
+           if (scroll >= 50) {
+           $(".navbar-fixed-top").addClass("missing-top");
+           
+           } else if (scroll < 50) {
+           $(".navbar-fixed-top").removeClass("missing-top");
+           
+         }
+         
          });
          setInterval('scroll()', 600);
          /* end header fixed function*/
+         
+         $(function(){
+             var includes = $('[data-include]');
+             jQuery.each(includes, function(){
+               var file = 'include/' + $(this).data('include') + '.html';
+               $(this).load(file);
+             });
+           });
       </script>
    </body>
 </html>
