@@ -636,7 +636,7 @@ section{
 .form-field label{
 	float: left;
 	width: 100%;
-	margin-top: 5px;
+	margin-top: -10px;
 	font-size: 0.9em;
 }
 .form-field input[type=text]{
@@ -652,6 +652,7 @@ section{
 	height: 100px;
 	resize: none;
 	padding: 10px;
+	margin-bottom: 10px;
 	color: #333333;
 	border: 1px solid #fd9213;
 }
