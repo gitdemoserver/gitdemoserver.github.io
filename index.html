@@ -482,7 +482,7 @@
                <div class="col-xs-12 col-sm-7 col-md-7">
                   <div class="contact-form">
                      <h3>Enquiry</h3>
-                     <form action="mail_handler.php" method="post">
+                     <form action="" name="enquiry-form" onsubmit="return validateForm()" method="post">
                         <div class="form-field">
                            <input name="first_name" placeholder="Name" type="text" class="textbox">
                         </div>
@@ -633,6 +633,16 @@
                $(this).load(file);
              });
            });
+
+
+         function validateForm() {
+           var x = document.forms["enquiry-form"]["first_name"].value;
+           if (x == "") {
+             alert("Name must be filled out");
+             return false;
+           }
+         }
+
       </script>
    </body>
 </html>
