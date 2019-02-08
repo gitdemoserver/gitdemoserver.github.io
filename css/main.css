@@ -861,3 +861,6 @@ section{
 .company_address h3{
 	margin-top: 0px;
 }
+form .error {
+  color: #ff0000;
+}
