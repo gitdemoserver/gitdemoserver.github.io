@@ -660,7 +660,7 @@ section{
 }
 .address-text{
 	float: left;
-	width: 330px;
+	width: 360px;
 	font-size: 1em;
 	line-height: 1.5em;
 	margin-bottom: 10px;
@@ -686,6 +686,15 @@ section{
 	min-width: 95px;
 	font-weight: bold;
 }
+.address-contact i.fa-whatsapp{
+	margin-right: 5px;
+	font-size: 1.2em;
+	color: #129309;
+}
+.address-contact i.fa-mobile{
+	margin-right: 5px;
+	font-size: 1.5em;
+}
 .contactus-section{
 	padding: 0px;
 }
@@ -698,6 +707,21 @@ section{
 	width: 100%;
 	background: #000000;
 	padding: 4px 0px;
+}
+.header-information i.fa-map-marker{
+    color: #fd9213;
+}
+.header-information i.fa-mobile{
+	color: #ffffff;
+}
+.header-information i.fa-envelope{
+	color: #ffffff;
+}
+.header-information i.fa-facebook-square{
+	color: #0f3d8a;
+}
+.header-information i.fa-whatsapp{
+	color: #129309;
 }
 .navbar-fixed-top{
 	top: 35px;
@@ -756,7 +780,7 @@ section{
 }
 .top-information-right{
 	float: left;
-	width: 22%;
+	width: 25%;
 	padding: 0px 20px;
 }
 .follow-us-top{
@@ -785,7 +809,7 @@ section{
 }
 .top-information-left{
 	float: left;
-	width: 78%;
+	width: 75%;
 	padding: 0px 20px;
 }
 .navbar-fixed-top.missing-top{
