@@ -705,7 +705,7 @@ section{
 .header-information{
 	float: left;
 	width: 100%;
-	background: #000000;
+	background: #333333;
 	padding: 4px 0px;
 }
 .header-information i.fa-map-marker{
@@ -801,6 +801,7 @@ section{
 .social-links a{
 	color: #ffffff;
 	font-size: 0.8em;
+	text-decoration: none;
 }
 .social-links i{
 	font-size: 1em;
@@ -929,4 +930,7 @@ form .error {
 }
 .modal-body img{
 	height: 350px;
+}
+.header-information-mobile{
+	display: none;
 }
